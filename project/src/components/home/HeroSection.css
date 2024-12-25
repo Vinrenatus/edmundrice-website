@@ -1,0 +1,224 @@
+/* Hero Section Styles */
+.hero-section {
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Background Image Styles */
+.hero-section .background-container {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.hero-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7; /* Slight transparency to allow background images to show through */
+    transition: opacity 1s ease-in-out;
+}
+
+/* Content Container */
+.hero-section .content-container {
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    z-index: 1;
+}
+
+/* Motto Card Styles */
+.hero-section .motto-card {
+    width: 360px;/* Reduced width */
+    height: 360px; /* Reduced height */
+    padding: 0.5px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.85), rgba(224, 224, 224, 0.85), rgba(139, 198, 236, 0.85)); /* Slight transparency for the motto card */
+    color: #0fadecef; /* Deep Green */
+    border-radius: 2rem;
+    box-shadow: 0 6px 12px rgba(12, 18, 21, 0.3);
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: scroll;
+    margin-top: 40px; /* Added space above */
+    margin-bottom: 40px; /* Added space below */
+}
+
+.hero-section .motto-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section .motto-card img {
+    width: 87%;
+    height: 60%;
+    object-fit: contain;
+    border-radius: 30%;
+    margin-bottom: 18px;
+}
+
+.hero-section .motto-card .text-container {
+    padding: 0.9rem;
+    color: #98f00b; /* Deep Ocean Blue */
+    font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    text-wrap: break-word;
+}
+
+/* Flip Card Animation */
+.hero-section .flip-card {
+    perspective: 1000px;
+}
+
+.hero-section .flip-card .flip-card-front,
+.hero-section .flip-card .flip-card-back {
+    backface-visibility: visible;
+    border-radius: 18%;
+    border-style: dashed;
+    display: inline;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-evenly;
+    transition: transform 1s ease;
+    box-shadow: 0 6px 12px rgba(6, 241, 230, 0.315);
+}
+
+/* Ensures the flip happens only on Y-axis without shifting */
+.hero-section .flip-card .flip-card-front {
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.85), rgba(224, 224, 224, 0.85));
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform: rotate3d(180deg);
+}
+
+.hero-section .flip-card .flip-card-back {
+    background: linear-gradient(45deg, rgba(139, 198, 236, 0.85), rgba(143, 148, 251, 0.85));
+    transform: rotateX(180deg);
+}
+
+.hero-section .flip-card:hover .flip-card-front {
+    transform: rotateX(180deg);
+    transition: 3ms;
+}
+
+.hero-section .flip-card:hover .flip-card-back {
+    transform: rotateX(180deg);
+}
+
+.hero-section .flip-card img {
+    border-radius: 10%;
+    border: 18px solid turquoise;
+    margin-bottom: 1px;
+}
+
+.hero-section .flip-card .flip-card-back p {
+    text-align:justify;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+}
+
+/* Sliding Content */
+.hero-section .sliding-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease;
+}
+
+.hero-section .sliding-container p {
+    font-size: 1.25rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    font-weight: 100;
+    text-align: justify;
+    line-height: 1.75rem;
+    color: hsl(207, 83%, 45%);
+}
+
+/* Paragraph Content Container */
+.hero-section .paragraph-container {
+    position: relative;
+    width: 50%;
+    background: linear-gradient(45deg, hsla(255, 255, 255, 0.85), rgba(143, 148, 251, 0.85));
+    background-color: rgba(18, 164, 231, 0.315); /* Slight transparency for content container */
+    padding: 3.6rem;
+    border-radius: 1.8rem;
+    box-shadow: 0 6px 12px hsla(180, 66%, 31%, 0.233);
+    opacity: 0.9;
+    transition: all 0.5s ease;
+}
+
+.hero-section .paragraph-container .button-prev,
+.hero-section .paragraph-container .button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    cursor: grab;
+    transition: color 0.3s ease;
+    background: #e4ce0ae3;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    color: rgb(240, 75, 10);
+}
+
+.hero-section .paragraph-container .button-prev {
+    left:3px;
+}
+
+.hero-section .paragraph-container .button-next {
+    right:3px;
+}
+
+.hero-section .paragraph-container .button-prev:hover,
+.hero-section .paragraph-container .button-next:hover {
+    background: rgba(248, 244, 9, 0.87);
+    margin: 0%;
+    
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .hero-section .content-container {
+        flex-direction: unset;
+        gap: 1rem;
+    }
+
+    .hero-section .motto-card {
+        width: 200%;
+        padding: 1rem;
+    }
+
+    .hero-section .paragraph-container {
+        width: 100%;
+        margin-top: 2rem;
+        padding: 1.5rem;
+    }
+
+    .hero-section .flip-card {
+        width: 100%;
+    }
+
+    .hero-section .flip-card .flip-card-front,
+    .hero-section .flip-card .flip-card-back {
+        padding: 1rem;
+    }
+
+    .hero-section .sliding-container {
+        padding: 1rem;
+    }
+}
+
+
+  

@@ -1,0 +1,36 @@
+export const programs = [
+  {
+    id: 1,
+    title: "Energy Efficiency Program",
+    description: "Promoting sustainable energy practices through education and implementation of energy-efficient solutions.",
+    image: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?q=80&w=2074&auto=format&fit=crop",
+    category: "sustainability"
+  },
+  {
+    id: 2,
+    title: "Renewable Energy Initiative",
+    description: "Supporting the transition to clean energy sources through policy advocacy and community engagement.",
+    image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2072&auto=format&fit=crop",
+    category: "renewable"
+  }
+];
+
+export const news = [
+  {
+    id: 1,
+    title: "ERC-EC Launches New Energy Policy Framework",
+    content: "The Energy and Petroleum Regulatory Authority has unveiled a comprehensive policy framework aimed at streamlining the energy sector.",
+    date: "2024-03-10",
+    image: "https://images.unsplash.com/photo-1541873676-a18131494184?q=80&w=2069&auto=format&fit=crop"
+  }
+];
+
+export const gallery = [
+  {
+    id: 1,
+    title: "Energy Summit 2024",
+    type: "image",
+    url: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2070&auto=format&fit=crop",
+    description: "Annual gathering of energy sector stakeholders"
+  }
+];
