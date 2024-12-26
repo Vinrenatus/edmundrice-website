@@ -4,7 +4,7 @@ import { programs } from '../data';
 
 export default function Programs() {
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const categories = ['all', 'sustainability', 'renewable'];
+  const categories = ['all', '8-4-4', 'CBC','Computer College','Beauty & Cosmetics','Tailoring & Embroidery','Woodwork and Carpentry','Dairy Production','Extracurricular','Alumni Support & Finacial Aid'];
 
   const filteredPrograms = selectedCategory === 'all'
     ? programs
